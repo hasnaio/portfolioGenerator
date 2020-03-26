@@ -10,6 +10,31 @@
 body,h1 {font-family: "Montserrat", sans-serif}
 img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
+
+/* relevant styles */
+.img__wrap {
+  position: relative;
+}
+
+.img__description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(232, 246, 255, 0.164);
+  color: rgb(0, 0, 0);
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
 </style>
 <body>
 
@@ -34,7 +59,10 @@ img {margin-bottom: -7px}
 <!-- Photo Grid -->
 <div class="w3-row" id="myGrid" style="margin-bottom:128px">
   <div class="w3-third">
-    <img src="bikchers/rocks.jpg" style="width:100%">
+    <div class="img__wrap">
+      <img class="img__img" src="bikchers/rocks.jpg" style="width:100%">
+      <p class="img__description">This image looks super neat.</p>
+    </div>
     <img src="bikchers/sound.jpg" style="width:100%">
     <img src="bikchers/woods.jpg" style="width:100%">
     <img src="bikchers/rock.jpg" style="width:100%">
