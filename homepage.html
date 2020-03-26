@@ -6,35 +6,18 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,500,600' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="HoverEffectIdeas/css/set1.css">
+<link rel="stylesheet" type="text/css" href="HoverEffectIdeas/css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="HoverEffectIdeas/css/demo.css" />
+<link rel="stylesheet" type="text/css" href="HoverEffectIdeas/css/set2.css">
+<link rel="stylesheet" type="text/css" href="HoverEffectIdeas/fonts/font-awesome-4.2.0/css/font-awesome.min.css">
+
 <style>
 body,h1 {font-family: "Montserrat", sans-serif}
 img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
-
-/* relevant styles */
-.img__wrap {
-  position: relative;
-}
-
-.img__description {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(232, 246, 255, 0.164);
-  color: rgb(0, 0, 0);
-  visibility: hidden;
-  opacity: 0;
-
-  /* transition effect. not necessary */
-  transition: opacity .2s, visibility .2s;
-}
-
-.img__wrap:hover .img__description {
-  visibility: visible;
-  opacity: 1;
-}
 </style>
 <body>
 
@@ -57,19 +40,28 @@ img {margin-bottom: -7px}
 </div>
 
 <!-- Photo Grid -->
-<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+<div class="w3-row" id="myGrid">
   <div class="w3-third">
-    <div class="img__wrap">
-      <img class="img__img" src="bikchers/rocks.jpg" style="width:100%">
-      <p class="img__description">This image looks super neat.</p>
-    </div>
+    <figure class="effect-zoe">
+      <img src="bikchers/rocks.jpg" style="width:100%">
+      <figcaption>
+        <h2>Creative <span>Zoe</span></h2>
+        <p class="icon-links">
+          <a href="#"><span class="icon-heart"></span></a>
+          <a href="#"><span class="icon-eye"></span></a>
+          <a href="#"><span class="icon-paper-clip"></span></a>
+        </p>
+        <p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
+      </figcaption>			
+    </figure>
+    
     <img src="bikchers/sound.jpg" style="width:100%">
     <img src="bikchers/woods.jpg" style="width:100%">
     <img src="bikchers/rock.jpg" style="width:100%">
     <img src="bikchers/nature.jpg" style="width:100%">
     <img src="bikchers/mist.jpg" style="width:100%">
   </div>
-
+    
   <div class="w3-third">
     <img src="bikchers/coffee.jpg" style="width:100%">
     <img src="bikchers/bridge.jpg" style="width:100%">
