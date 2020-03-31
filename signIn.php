@@ -9,25 +9,26 @@
 <header class="w3-container w3-teal">
   <h3>LOG IN</h3>
 </header>
-    
+
+
 <div class="w3-container w3-margin-top w3-padding w3-display-middle w3-third">
 
-    <form class="w3-container w3-card-4 ">
+    <form action="process.php" method="POST" class="w3-container w3-card-4 " >
     
     <p>
-    <input class="w3-input" type="text" style="width:100%" required>
+    <input class="w3-input" type="text" name="username" style="width:100%" required>
     <label>Name</label></p>
 
     <p>
-    <input class="w3-input" type="password" style="width:100%" required>
+    <input class="w3-input" type="password" name="password" style="width:100%" required>
     <label>Password</label></p>
     
     <p>
-    <input id="milk" class="w3-check" type="checkbox" checked="checked">
+    <input id="milk" class="w3-check" type="checkbox" name="sessionCheck">
     <label>Stay logged in</label></p>
     
     <p>
-    <button class="w3-button w3-section w3-teal w3-ripple"> LOG IN </button></p>
+    <button class="w3-button w3-section w3-teal w3-ripple" name="login"> LOG IN </button></p>
     
     </form>
     
