@@ -1,7 +1,5 @@
 <?php
-session_start();
 require_once('db.php');
-
     if(isset($_POST['login'])) {
 
         $query="SELECT * FROM users WHERE username'".$_POST['username']."' AND 	password'".$_POST['password']."'";
