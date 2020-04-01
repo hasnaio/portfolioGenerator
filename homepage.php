@@ -30,13 +30,14 @@ img {margin-bottom: -7px}
 <header class="w3-center w3-margin-bottom">
   <h1><b>BORTFOILIO GENERATOR</b></h1>
   <p><b>Welcome to Bortfoilio Generator, check some work from our beloved users >w< !</b></p>
-  <a href="signIn.html"><button class="w3-button w3-green">Login</button></a>
-  <a href="signUp.html"><button class="w3-button w3-blue">Register</button></a>
+  <a href="signIn_Page.php"><button class="w3-button w3-green">Login</button></a>
+  <a href="signUp_Page.php"><button class="w3-button w3-blue">Register</button></a>
 
   <?php
     session_start();
     if(isset($_SESSION['username'])){
         echo'<br> welcome '.$_SESSION['username'];
+        echo '<a href="logout.php?logout">logout</a>';
     }
   ?>
 
