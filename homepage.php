@@ -34,10 +34,10 @@ img {margin-bottom: -7px}
   <a href="signUp.html"><button class="w3-button w3-blue">Register</button></a>
 
   <?php
-  session_start();
-  if(isset($_SESSION['user'])){
-  echo'welcome '.$_SESSION['user'];
-  }
+    session_start();
+    if(isset($_SESSION['username'])){
+        echo'<br> welcome '.$_SESSION['username'];
+    }
   ?>
 
 

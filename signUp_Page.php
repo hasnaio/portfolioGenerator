@@ -26,14 +26,6 @@
         <p>
         <input class="w3-input" type="password" style="width:100%" name="password" required>
         <label>Password</label></p>
-
-        <p>
-        <input class="w3-radio" type="radio" name="gender" value="male" checked>
-        <label>male</label></p>
-        
-        <p>
-        <input class="w3-radio" type="radio" name="gender" value="female">
-        <label>female</label></p>
         
         
         <p>

@@ -4,14 +4,14 @@ include('db.php');
 
 echo "<br>".$_POST["username"];
 echo "<br>".$_POST["displayname"];
-echo "<br>".$_POST["password"];
-echo "<br>".$_POST["gender"]."<br>";
+echo "<br>".$_POST["password"]."<br>";
 
 $username = $_POST["username"];
 $password = $_POST["password"];
+$displayname = $_POST["displayname"];
 
-$query="INSERT INTO users (username, password, professionID, avatarID)
-VALUES ('$username','$password',1,1)";
+$query="INSERT INTO users (username, password, displayname, professionID, avatarID)
+VALUES ('$username','$password', '$displayname', 1,1)";
 
 
 echo $query."<br>";

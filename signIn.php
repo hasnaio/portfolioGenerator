@@ -1,38 +1,20 @@
+<?php
+session_start();
+include('db.php');
+if(isset($_POST['login'])) {
 
-<!DOCTYPE html>
-<html>
-<title>Log In</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
+        $query="SELECT * FROM users WHERE username = '".$_POST['username']."' AND password = '".$_POST['password']."'";
+        $result=mysqli_query($conn, $query);
 
-<header class="w3-container w3-teal">
-  <h3>LOG IN</h3>
-</header>
+        if(mysqli_fetch_assoc($result)) {
+            $_SESSION['username']=$_POST['username'];
+            header ("Location: homepage.php");
+        }
+        else {
+            echo "<br> wrong username and/or password";
+        }
 
 
-<div class="w3-container w3-margin-top w3-padding w3-display-middle w3-third">
+    }
 
-    <form action="process.php" method="POST" class="w3-container w3-card-4 " >
-    
-    <p>
-    <input class="w3-input" type="text" name="username" style="width:100%" required>
-    <label>Name</label></p>
-
-    <p>
-    <input class="w3-input" type="password" name="password" style="width:100%" required>
-    <label>Password</label></p>
-    
-    <p>
-    <input id="milk" class="w3-check" type="checkbox" name="sessionCheck">
-    <label>Stay logged in</label></p>
-    
-    <p>
-    <button class="w3-button w3-section w3-teal w3-ripple" name="login"> LOG IN </button></p>
-    
-    </form>
-    
-    </div>
-
-</body>
-</html> 
+?>
