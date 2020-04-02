@@ -34,12 +34,14 @@ img {margin-bottom: -7px}
     session_start();
     if(isset($_SESSION['username'])){
       echo'<b>Welcome to Bortfoilio Generator '.$_SESSION['username'].', check some work from our beloved users >w< !</b><br><br>';
+      echo'<a href="profile.php"><button class="w3-button w3-indigo w3-margin-right">Profile</button></a>   ';
       echo '<a href="logout.php?logout"><button class="w3-button w3-red">Logout</button></a>';
     }
     else {
       echo'<b>Welcome to Bortfoilio Generator, check some work from our beloved users >w< !</b><br><br>';
       echo'<a href="signIn_Page.php"><button class="w3-button w3-green">Login</button></a>   ';
       echo'<a href="signUp_Page.php"><button class="w3-button w3-blue">Register</button></a>';
+
     }
     ?>
 
@@ -127,8 +129,9 @@ img {margin-bottom: -7px}
         <p class="description">i'm out of things to say.</p>
       </figcaption>			
     </figure>
-   
-    
+
+    <!-- <a href="usersePage.html"><button class="w3-button w3-indigo" style="margin-right:25px; margin-left:25px;">View Users Profiles</button></a> -->
+
     
   </div>
 </div>
@@ -137,13 +140,7 @@ img {margin-bottom: -7px}
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
 </footer>
  
 
