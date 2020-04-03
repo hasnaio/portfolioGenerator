@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php session_start() ?>
 <html lang="en">
     <title>Portfolio Generator</title>
     <meta charset="UTF-8">
@@ -14,8 +14,8 @@
     <header class="w3-display-container w3-content w3-center" style="max-width:1500px">
         <img class="w3-image" src="bikchers/photographer.jpg" alt="Me" width="1500" height="600">
         <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
-            <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">JANE DOE</h1>
-            <h5 class="w3-hide-large" style="white-space:nowrap">JANE DOE</h5>
+            <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge"><?php echo $_SESSION["displayname"]; ?></h1>
+            <h5 class="w3-hide-large" style="white-space:nowrap"><?php echo $_SESSION["displayname"]; ?></h5>
             <h3 class="w3-hide-medium w3-hide-small">PHOTOGRAPHER</h3>
         </div>
 
@@ -24,9 +24,8 @@
             <a href="homepage.php" class="w3-bar-item w3-button">Home</a>
             <a href="usersePage.html" class="w3-bar-item w3-button">Users</a>
             <?php
-                session_start();
                 if(isset($_SESSION['username'])){
-                    echo'<a href="fileUpload.php" class="w3-bar-item w3-button">Upload</a>';
+                    echo'<a href="upload_page.php" class="w3-bar-item w3-button">Upload</a>';
                 }
             ?>
             
