@@ -35,18 +35,19 @@ img {margin-bottom: -7px}
     if(isset($_SESSION['username'])){
 
   ?>
-      <b>Welcome to Bortfoilio Generator '.$_SESSION['username'].', check some work from our beloved users >w< !</b><br><br>
+      <b>Welcome to Bortfoilio Generator <?php echo $_SESSION['username'] ?>, check some work from our beloved users >w< !</b><br><br>
       <a href="profile.php"><button class="w3-button w3-indigo w3-margin-right">Profile</button></a>
       <a href="logout.php?logout"><button class="w3-button w3-red">Logout</button></a>
+      <a href="upload_page.php"><button class="w3-button w3-yellow">Upload a pic!</button></a>
 
   <?php
     }
     else {
 
   ?>
-      echo'<b>Welcome to Bortfoilio Generator, check some work from our beloved users >w< !</b><br><br>';
-      echo'<a href="signIn_Page.php"><button class="w3-button w3-green">Login</button></a>   ';
-      echo'<a href="signUp_Page.php"><button class="w3-button w3-blue">Register</button></a>';
+      <b>Welcome to Bortfoilio Generator, check some work from our beloved users >w< !</b><br><br>
+      <a href="signIn_Page.php"><button class="w3-button w3-green">Login</button></a>  
+      <a href="signUp_Page.php"><button class="w3-button w3-blue">Register</button></a>
  <?php
     }
     ?>

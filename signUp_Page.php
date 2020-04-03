@@ -30,9 +30,11 @@
         
         <p>
         <button class="w3-button w3-section w3-teal w3-ripple"> SIGN UP </button></p>
-        
+
         </form>
-        
+        <p>
+    Already have an account? Then wtf are you doing here? Go       <a href="signIn_Page.php"><button class="w3-button w3-green">Login</button></a>  
+    </p>     
         </div>
 
     </body>

@@ -25,9 +25,12 @@
     
     <p>
     <button class="w3-button w3-section w3-teal w3-ripple" name="login"> LOG IN </button></p>
-    
+
     </form>
-    
+         <p> 
+         You don't have an account? Then why are you here???????????????????????? GO REGISTER DUMMY D:< !
+         <a href="signUp_Page.php"><button class="w3-button w3-blue">Register</button></a>
+         </p>
     </div>
 
 </body>
