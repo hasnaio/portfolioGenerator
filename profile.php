@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <body>
+    <body style="background-color:#000000;">
     <!-- Header -->
     <header class="w3-display-container w3-content w3-center" style="max-width:1500px">
         <img class="w3-image" src="bikchers/photographer.jpg" alt="Me" width="1500" height="600">
@@ -20,11 +20,11 @@
         </div>
 
         <!-- Navbar (placed at the bottom of the header image) -->
-        <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
+        <div class="w3-bar w3-round w3-pale-green w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
             <a href="homepage.php" class="w3-bar-item w3-button">Home</a>
             <a href="usersePage.html" class="w3-bar-item w3-button">Users</a>
             <?php
-                if(isset($_SESSION['username'])){
+                if(isset($_SESSION['username'])) {
                     echo'<a href="upload_page.php" class="w3-bar-item w3-button">Upload</a>';
                 }
             ?>

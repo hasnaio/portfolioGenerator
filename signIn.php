@@ -10,11 +10,12 @@ if(isset($_POST['login'])) {
         }
         
         while($row = mysqli_fetch_assoc($result)) {
+            $_SESSION['userID']=$row['userID'];
             $_SESSION['username']=$row['username'];
             $_SESSION['displayname'] = $row['displayname'];
+
             header ("Location: homepage.php");
         }
-
 
 
     }
