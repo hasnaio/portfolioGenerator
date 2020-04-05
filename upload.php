@@ -22,10 +22,10 @@ if(isset($_POST['submit'])) {
         if ($picError === 0) {
             $picNameNew=uniqid('', true).".".$picActualExt;
 
-            $picDestination = 'uploads/'.$username;
+            $picDestination = 'uploads/'.$username.$userID;
 
             if(!file_exists('$picDestination')){
-                mkdir('uploads/'.$username, 0777, true);    
+                mkdir('uploads/'.$username.$userID, 0777, true);    
             }
 
             $picDestination .= '/'.$picNameNew;
