@@ -20,7 +20,6 @@ if(isset($_POST['submit'])) {
 
     if (in_array($picActualExt, $allowed)) {
         if ($picError === 0) {
-            $picNameNew=uniqid('', true).".".$picActualExt;
 
             $picDestination = 'uploads/'.$username.$userID;
 
@@ -28,7 +27,7 @@ if(isset($_POST['submit'])) {
                 mkdir('uploads/'.$username.$userID, 0777, true);    
             }
 
-            $picDestination .= '/'.$picNameNew;
+            $picDestination .= '/'.$picName;
 
             move_uploaded_file($picTmpName, $picDestination);
 
