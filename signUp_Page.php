@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include('professions.php'); ?>
 <html>
     <head>
         <title>Sign Up</title>
@@ -61,17 +62,13 @@
 
         <p>
         <select id="professions" name="professions" class="w3-select">
-            <option value="photographer">Photographer</option>
-            <option value="illustrator">Illustrator</option>
-            <option value="graphicsDesigner">Graphics Designer</option>
-            <option value="webDesigner">Web Designer</option>
-            <option value="artist">Artist</option>
+            <?php echo $options;?>
         </select required>
         <label>Profession</label></p>
 
-        <p>
+        <!-- <p>
             <button id="selectAvatar" type="button">Select Avatar</button>            
-        </p>
+        </p> -->
         
         <p>
             <button class="w3-button w3-section w3-teal w3-ripple"> SIGN UP </button></p>
@@ -83,7 +80,10 @@
                     <div class="modalCloseBar">
                         <span> X </span>
                     </div>
-                    <p>content content content</p>
+                    <p><img src="iconsTest/icon1.jpg" alt="">
+                    <img src="iconsTest/icon2.jpg" alt=""></p>
+                    <p><img src="iconsTest/icon3.png" alt="">
+                    <img src="iconsTest/icon4.png" alt=""></p>
                     <button class="w3-button w3-section w3-teal w3-ripple" id ="select">select</button>
                 </div>
             </div>

@@ -9,9 +9,10 @@ echo "<br>".$_POST["password"]."<br>";
 $username = $_POST["username"];
 $password = $_POST["password"];
 $displayname = $_POST["displayname"];
+$professionID = $_POST["professionID"];
 
 $query="INSERT INTO users (username, password, displayname, professionID, avatarID)
-VALUES ('$username','$password', '$displayname', 1,1)";
+VALUES ('$username','$password', '$displayname', '$professionID',1)";
 
 
 echo $query."<br>";
