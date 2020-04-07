@@ -3,7 +3,7 @@ session_start();
 include('db.php');
 if(isset($_POST['login'])) {
 
-        $query="SELECT * FROM users WHERE username = '".$_POST['username']."' AND password = '".$_POST['password']."'";
+        $query="SELECT * FROM users,professions WHERE username = '".$_POST['username']."' AND password = '".$_POST['password']."' AND users.professionID = professions.professionID";
         $result=mysqli_query($conn, $query);
         if (!$result){
             echo "<br> Wrong user/pass </br>";
@@ -13,11 +13,12 @@ if(isset($_POST['login'])) {
             $_SESSION['userID']=$row['userID'];
             $_SESSION['username']=$row['username'];
             $_SESSION['displayname'] = $row['displayname'];
-
-            header ("Location: homepage.php");
+            $_SESSION['professionID'] = $row['professionID'];
+            $_SESSION['professionName'] = $row['professionName'];
+           header ("Location: homepage.php");
         }
 
-
     }
+
 
 ?>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php session_start() ?>
+<?php session_start(); ?>
 <html lang="en">
     <title>Portfolio Generator</title>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
         <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
             <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge"><?php echo $_SESSION["displayname"]; ?></h1>
             <h5 class="w3-hide-large" style="white-space:nowrap"><?php echo $_SESSION["displayname"]; ?></h5>
-            <h3 class="w3-hide-medium w3-hide-small">PHOTOGRAPHER</h3>
+            <h3 class="w3-hide-medium w3-hide-small"><?php echo $_SESSION['professionName'] ?> </h3>
         </div>
 
         <!-- Navbar (placed at the bottom of the header image) -->
