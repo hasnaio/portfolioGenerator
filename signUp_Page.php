@@ -66,9 +66,9 @@
         </select required>
         <label>Profession</label></p>
 
-        <!-- <p>
+        <p>
             <button id="selectAvatar" type="button">Select Avatar</button>            
-        </p> -->
+        </p>
         
         <p>
             <button class="w3-button w3-section w3-teal w3-ripple"> SIGN UP </button></p>

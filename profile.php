@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
+<?php 
+
+session_start(); 
+include('userPhotos.php');
+?>
 <html lang="en">
     <title>Portfolio Generator</title>
     <meta charset="UTF-8">
@@ -12,7 +16,7 @@
     <body style="background-color:#000000;">
     <!-- Header -->
     <header class="w3-display-container w3-content w3-center" style="max-width:1500px">
-        <img class="w3-image" src="bikchers/photographer.jpg" alt="Me" width="1500" height="600">
+        <img class="w3-image" src="coverImages/photographer.png" alt="Me" width="1100" height="600">
         <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
             <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge"><?php echo $_SESSION["displayname"]; ?></h1>
             <h5 class="w3-hide-large" style="white-space:nowrap"><?php echo $_SESSION["displayname"]; ?></h5>
@@ -36,11 +40,10 @@
     <div class="w3-content w3-padding-large w3-margin-top" id="portfolio">
 
     <!-- Images (Portfolio) -->
-    <img src="bikchers/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
-    <img src="bikchers/ocean2.jpg" alt="Ocean II" class="w3-image w3-margin-top" width="1000" height="500">
-    <img src="bikchers/falls2.jpg" alt="Falls" class="w3-image w3-margin-top" width="1000" height="500">
-    <img src="bikchers/mountainskies.jpg" alt="Skies" class="w3-image w3-margin-top" width="1000" height="500">
-    <img src="bikchers/mountains2.jpg" alt="Mountains" class="w3-image w3-margin-top" width="1000" height="500">
+    <?php 
+        foreach(array_reverse($photos) as $foto)
+            echo $foto;
+    ?>            
 
     <!-- End page content -->
     </div>

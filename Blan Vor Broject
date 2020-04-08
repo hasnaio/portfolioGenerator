@@ -17,9 +17,19 @@ Pages:
 Tasks for 5/4/2020 onwards (updated 7/4/2020 (A,B are updates for each point)):
 1) Add professions & avatar for each user.
 1A) So you've not added the professions to the database, please add it to the database so that it's dynamic
- (meaning you can add professions in the future without ruining the app or touching code, simply by editting the database)
-1B) You have yet to draw your default avatars
-2) Show pics of each user in their profile
-2A)Not done
+ (meaning you can add professions in the future without ruining the app or touching code, simply by editting the database) [DONE]
+
+**get the users from the db firsteu**
+
 3) Fix the users page to have a link to it and everything.
 3A)Not done
+
+2) Show pics of each user in their profile
+2A)DONE - BUT BLZ CHANGE IT SO IT WORKS WITH $_get!! [pending]
+
+
+
+1B) You have yet to draw your default avatars [WIP]
+
+
+

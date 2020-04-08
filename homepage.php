@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="HoverEffectIdeas/css/demo.css" />
     <link rel="stylesheet" type="text/css" href="HoverEffectIdeas/css/set1.css" />
     
-
     <style>
       body,h1 {font-family: "Montserrat", sans-serif}
       img {margin-bottom: -7px}
