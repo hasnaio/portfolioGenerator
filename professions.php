@@ -1,7 +1,7 @@
 <?php
 
 include('db.php');
-$query="SELECT * FROM `professions`";
+$query="SELECT * FROM professions";
 
 $result=mysqli_query($conn, $query);
 $options="";

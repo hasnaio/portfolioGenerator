@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include('users.php'); ?>
 <html>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
@@ -29,10 +30,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
 
   <!-- First Photo Grid-->
+        
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
     <div class="w3-quarter">
       <img src="bikchers/sandwich.jpg" alt="Sandwich" style="width:100%">
-      <h3>Micheal Jackson</h3>
+      
+      <h3>
+        <?php 
+        foreach($users as $user)
+            echo $user;
+        ?>     
+      </h3>
       <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
     </div>
    

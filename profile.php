@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php 
-
 session_start(); 
 include('userPhotos.php');
+include('users.php');
 ?>
 <html lang="en">
     <title>Portfolio Generator</title>
@@ -18,15 +18,15 @@ include('userPhotos.php');
     <header class="w3-display-container w3-content w3-center" style="max-width:1500px">
         <img class="w3-image" src="coverImages/photographer.png" alt="Me" width="1100" height="600">
         <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
-            <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge"><?php echo $_SESSION["displayname"]; ?></h1>
-            <h5 class="w3-hide-large" style="white-space:nowrap"><?php echo $_SESSION["displayname"]; ?></h5>
-            <h3 class="w3-hide-medium w3-hide-small"><?php echo $_SESSION['professionName'] ?> </h3>
+            <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge"><?php echo $displayname; ?></h1>
+            <h5 class="w3-hide-large" style="white-space:nowrap"><?php echo $displayname; ?></h5>
+            <h3 class="w3-hide-medium w3-hide-small"><?php echo $professionName; ?> </h3>
         </div>
 
         <!-- Navbar (placed at the bottom of the header image) -->
         <div class="w3-bar w3-round w3-pale-green w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
             <a href="homepage.php" class="w3-bar-item w3-button">Home</a>
-            <a href="usersePage.html" class="w3-bar-item w3-button">Users</a>
+            <a href="usersPage.php" class="w3-bar-item w3-button">Users</a>
             <?php
                 if(isset($_SESSION['username'])) {
                     echo'<a href="upload_page.php" class="w3-bar-item w3-button">Upload</a>';
