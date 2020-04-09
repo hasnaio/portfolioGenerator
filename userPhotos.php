@@ -5,7 +5,9 @@
 //to get the data, you'll use $_GET["userID"] & $_GET["userName"]
 include ('db.php');
 
-$query="SELECT * FROM photos WHERE userID =".$_GET["userID"];
+$query="SELECT * FROM photos WHERE userID=".$_GET["userID"];
+
+
 
 $result=mysqli_query($conn, $query);
 $photos="";
@@ -21,6 +23,5 @@ while($row = mysqli_fetch_array($result)) {
     //push $photo into $photos array
 
 } 
-
 
 ?>
