@@ -15,8 +15,7 @@ while($row = mysqli_fetch_array($result)) {
     $userID = $row['userID'];
     $username = $row['username'];
     $displayname = $row['displayname'];
-    $professionID = $row['professionID'];
-    $user = "<a href='profile.php?userID=$userID&&username=$username&&professionID=$professionID'>$username</a><br>";
+    $user = "<a href='profile.php?userID=$userID&&username=$username'>$username</a><br>";
     // echo "<br>".$username;
     // echo "<br>".$displayname;
 

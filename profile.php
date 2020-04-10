@@ -2,7 +2,7 @@
 <?php 
 session_start(); 
 include('userPhotos.php');
-include('userInfo.php');
+include('users.php');
 ?>
 <html lang="en">
     <title>Portfolio Generator</title>
