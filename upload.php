@@ -12,6 +12,7 @@ if(isset($_POST['submit'])) {
     $picType=$_FILES['fileUpload']['type'];
     $username=$_SESSION['username'];
     $userID=$_SESSION['userID'];
+    $professionID=$_SESSION['professionID'];
 
     $picExt=explode('.', $picName);
     $picActualExt=strtolower(end($picExt));
@@ -36,7 +37,7 @@ if(isset($_POST['submit'])) {
 
             mysqli_query($conn, $queryPic);
 
-            header("location: profile.php?uploadsuccess");
+            header("location: profile.php?userID=$userID&&username=$username&&professionID=$professionID'");
         } else {
             echo "there was an error uploading your file)):";
         }
