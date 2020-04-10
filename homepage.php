@@ -69,6 +69,7 @@
 <div class="w3-row" id="myGrid">
   <div class="grid">
     <?php
+        shuffle($cards);
         foreach($cards as $card)
           echo $card;
     ?>
