@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include ('homePics.php'); ?>
 <html>
 <head>
     <title>homebage</title>
@@ -67,87 +68,10 @@
 <!-- Photo Grid -->
 <div class="w3-row" id="myGrid">
   <div class="grid">
-    <figure class="effect-zoe">
-      <img src="bikchers/rocks.jpg">
-      <figcaption>
-        <h2>Creative <span>Zoe</span></h2>
-        <p class="icon-links">
-          <a href="#"><span class="icon-heart"></span></a>
-          <a href="#"><span class="icon-eye"></span></a>
-          <a href="#"><span class="icon-paper-clip"></span></a>
-        </p>
-        <p class="description">yadda yadda.</p>
-      </figcaption>			
-    </figure>
-
-    <figure class="effect-zoe">
-      <img src="bikchers/sound.jpg" style="width:100%">
-      <figcaption>
-        <h2>Creative <span>Zoe</span></h2>
-        <p class="icon-links">
-          <a href="#"><span class="icon-heart"></span></a>
-          <a href="#"><span class="icon-eye"></span></a>
-          <a href="#"><span class="icon-paper-clip"></span></a>
-        </p>
-        <p class="description">elsa kween.</p>
-      </figcaption>			
-    </figure>
-
-    <figure class="effect-zoe">
-      <img src="bikchers/woods.jpg" style="width:100%">
-      <figcaption>
-        <h2>Creative <span>Zoe</span></h2>
-        <p class="icon-links">
-          <a href="#"><span class="icon-heart"></span></a>
-          <a href="#"><span class="icon-eye"></span></a>
-          <a href="#"><span class="icon-paper-clip"></span></a>
-        </p>
-        <p class="description">yeet.</p>
-      </figcaption>			
-    </figure>
-
-    <figure class="effect-zoe">
-      <img src="bikchers/rock.jpg" style="width:100%">
-      <figcaption>
-        <h2>Creative <span>Zoe</span></h2>
-        <p class="icon-links">
-          <a href="#"><span class="icon-heart"></span></a>
-          <a href="#"><span class="icon-eye"></span></a>
-          <a href="#"><span class="icon-paper-clip"></span></a>
-        </p>
-        <p class="description">you can stop testing now.</p>
-      </figcaption>			
-    </figure>
-
-    <figure class="effect-zoe">
-      <img src="bikchers/nature.jpg" style="width:100%">
-      <figcaption>
-        <h2>Creative <span>Zoe</span></h2>
-        <p class="icon-links">
-          <a href="#"><span class="icon-heart"></span></a>
-          <a href="#"><span class="icon-eye"></span></a>
-          <a href="#"><span class="icon-paper-clip"></span></a>
-        </p>
-        <p class="description">this works ok.</p>
-      </figcaption>			
-    </figure>
-
-    <figure class="effect-zoe">
-      <img src="bikchers/mist.jpg" style="width:100%">
-      <figcaption>
-        <h2>Creative <span>Zoe</span></h2>
-        <p class="icon-links">
-          <a href="#"><span class="icon-heart"></span></a>
-          <a href="#"><span class="icon-eye"></span></a>
-          <a href="#"><span class="icon-paper-clip"></span></a>
-        </p>
-        <p class="description">i'm out of things to say.</p>
-      </figcaption>			
-    </figure>
-
-    <!-- <a href="usersePage.html"><button class="w3-button w3-indigo" style="margin-right:25px; margin-left:25px;">View Users Profiles</button></a> -->
-
-    
+    <?php
+        foreach($cards as $card)
+          echo $card;
+    ?>
   </div>
 </div>
 

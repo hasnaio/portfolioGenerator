@@ -1,13 +1,10 @@
 <?php
-//localhost/porfolioGenerator/profile.php?userID=3&&userName=Elgay
 
-//to get the data, you'll use $_GET["userID"] & $_GET["userName"]
 include ('db.php');
 
-$query="SELECT * FROM users";
+$query="SELECT * FROM users, photos WHERE users.userID=photos.userID";
 
 $result=mysqli_query($conn, $query);
-$users="";
 $users = [];
 
 while($row = mysqli_fetch_array($result)) {
@@ -22,3 +19,4 @@ while($row = mysqli_fetch_array($result)) {
 } 
 
 ?>
+
