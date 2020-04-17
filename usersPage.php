@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php include('users.php'); ?>
 <html>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
@@ -56,9 +55,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
       <h3>
-        <?php
-          echo $table;
-        ?>     
+        <?php include('users.php'); ?>
      </h3>    
   </div>
   

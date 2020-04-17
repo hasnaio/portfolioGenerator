@@ -4,7 +4,6 @@
 
 //to get the data, you'll use $_GET["userID"] & $_GET["userName"]
 include ('db.php');
-include ('users.php');
 
 $userID = (int)$_GET['userID'];
 $professionID = (int)$_GET['professionID'];
