@@ -3,7 +3,7 @@
 //localhost/porfolioGenerator/profile.php?userID=3&&userName=Elgay
 
 //to get the data, you'll use $_GET["userID"] & $_GET["userName"]
-include ('db.php');
+include('db.php');
 
 $userID = (int)$_GET['userID'];
 $professionID = (int)$_GET['professionID'];

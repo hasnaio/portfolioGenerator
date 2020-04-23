@@ -4,6 +4,7 @@
 
 //to get the data, you'll use $_GET["userID"] & $_GET["userName"]
 include ('db.php');
+session_start(); 
 
 $query="SELECT * FROM photos WHERE userID =".$_GET["userID"];
 
