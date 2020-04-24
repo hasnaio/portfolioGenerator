@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include('users.php'); ?>
 <html>
 <title>Usews pwage UwU</title>
 <meta charset="UTF-8">
@@ -8,6 +9,17 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-bar-block .w3-bar-item {padding:20px}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 380px 380px 380px;
+}
+
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
 </style>
 <body>
 
@@ -55,7 +67,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
       <h3>
-        <?php include('users.php'); ?>
+
+      <?php
+        $chunk = array_chunk($users, 3);
+          foreach($chunk as $group):?>
+            <div class="grid-container">
+              <?php foreach($group as $user):?>
+                <div class="grid-item">
+                  <?php echo $user?>
+                </div>
+              <?php endforeach; ?>
+            </div>
+          <?php endforeach; ?>
      </h3>    
   </div>
   
