@@ -7,19 +7,13 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Karma", sans-serif
+  }
+.w3-bar-block .w3-bar-item {
+  padding:20px
+  }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 380px 380px 380px;
-}
-
-.grid-item {
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-}
 </style>
 <body>
 
@@ -63,24 +57,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 </header>
   
 <!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-        
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-      <h3>
-
-      <?php
-        $chunk = array_chunk($users, 3);
-          foreach($chunk as $group):?>
-            <div class="grid-container">
-              <?php foreach($group as $user):?>
-                <div class="grid-item">
-                  <?php echo $user?>
-                </div>
-              <?php endforeach; ?>
-            </div>
-          <?php endforeach; ?>
-     </h3>    
-  </div>
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">     
+  <h3>
+    <?php
+      $chunk = array_chunk($users, 3);
+      foreach($chunk as $group){?>
+        <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+            <?php foreach($group as $user){?>
+              <div class="w3-third">
+                <?php echo $user?>
+              </div>
+            <?php } ?>
+        </div>
+    <?php } ?>
+  </h3>    
+</div>
   
 
 </body>
