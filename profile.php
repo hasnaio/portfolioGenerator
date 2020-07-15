@@ -25,14 +25,7 @@ include('userData.php');
         <!-- Navbar (placed at the bottom of the header image) -->
         <div class="w3-bar w3-round w3-pale-green w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
             <a href="homepage.php" class="w3-bar-item w3-button">Home</a>
-            <a href="usersPage.php" class="w3-bar-item w3-button">Users</a>
-            <?php
-                if(isset($_SESSION['username'])) {?>
-                    <a href="upload_page.php" class="w3-bar-item w3-button">Upload</a>
-                    <a href="settingsPage.php?userID=<?php echo $_SESSION['userID'];?>&&username=<?php echo $_SESSION['username'];?>&&professionID=<?php echo $_SESSION['professionID']?>" class="w3-bar-item w3-button">Profile Settings</a>
-                <?php }
-            ?>
-            
+            <a href="usersPage.php" class="w3-bar-item w3-button">Users</a>            
         </div>
     </header>
 
