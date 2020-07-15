@@ -69,9 +69,15 @@
 <div class="w3-row" id="myGrid">
   <div class="grid">
     <?php
+        $i = 0;
+
         shuffle($cards);
-        foreach($cards as $card)
+        foreach($cards as $card){
+          if (++$i > 6)
+        break;
+        else
           echo $card;
+        }
     ?>
   </div>
 </div>
