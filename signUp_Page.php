@@ -9,6 +9,8 @@
         <title>Sign Up</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="jquery.imgcheckbox.js" > </script>
     </head>
 
     <body>
@@ -66,6 +68,24 @@
                    
                     </div>
                 </div>
-            </div>     
+            </div>   
+
+<script>
+    $(document).ready(function(){
+$("img").imgCheckbox({
+
+    onload: function(){
+        // Do something fantastic!
+    },
+    onclick: function(el){
+    	var isChecked = el.hasClass("imgChked"),
+	    imgEl = el.children()[0];  // the img element
+	    
+	console.log(imgEl.name + " is now " + (isChecked? "checked": "not-checked") + "!");
+    },
+    "radio" : true
+});
+});
+</script>  
     </body>
 </html> 
