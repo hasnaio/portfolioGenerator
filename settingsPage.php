@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -67,7 +69,12 @@
               <span></span>
               <input type="reset" class="btn btn-default" value="Reset Changes">
               <span></span>
-              <a href='profile.php?userID=<?php echo $_SESSION['userID'];?>&&username=<?php echo $_SESSION['username'];?>&&professionID=<?php echo $_SESSION['professionID']?>'><input type="button" name="backToProfile" class="btn btn-primary" value="Back to Profile"></a>
+              <a href='profile.php?userID=<?php echo $_SESSION['userID'];?>&&username=<?php echo $_SESSION['username'];?>&&professionID=<?php echo $_SESSION['professionID']?>'>
+                <input type="button" name="backToProfile" class="btn btn-primary" value="Back to Profile">
+              </a>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                  DELETE USER
+              </button>              
             </div>
           </div>
         </form>
@@ -79,7 +86,28 @@
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:335px"> 
 </footer>
 
- 
+ <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Press red button to delete your profile and everything!!!!!!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href='delete.php?userID=<?php echo $_SESSION['userID'];?>'>
+          <button type="button" class="btn btn-danger">Yes, Delete!</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
