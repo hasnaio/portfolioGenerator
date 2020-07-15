@@ -8,12 +8,18 @@ $options="";
 
 while($row = mysqli_fetch_array($result)) {
     $professionID = $row['professionID'];
+    if(isset($_GET['professionID'])) {
         if($_GET['professionID'] == $professionID){
             $options = $options."<option value=$professionID selected=selected>$row[1]</option>";
         }
         else {
             $options = $options."<option value=$professionID>$row[1]</option>";
         }
+    }
+    else {
+        $options = $options."<option value=$professionID>$row[1]</option>";
+    }
+
 } 
 
 ?>
