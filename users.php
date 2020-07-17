@@ -29,7 +29,16 @@ while($row = mysqli_fetch_array($result)) {
     $avatarName = $rowA['avatarName'];
     $avatarPic = "<img src='$avatarName' alt='".$avatarName."'";
 
-    $user = "<a href='profile.php?userID=$userID&&username=$username&&professionID=$professionID'>$avatarPic <br><br> $username <br> $professionName</a><br>";
+    $user = "<a href='profile.php?userID=$userID&&username=$username&&professionID=$professionID'style='text-decoration: none;'>
+            <div class='w3-light-grey w3-padding'>
+                $avatarPic<br>
+                <div class='w3-container'>
+                <h3>$username</h3>
+                <p class='w3-opacity'>$professionName</p>
+                </div>
+            </div>
+
+    </a>";
     
     $i++;
     // echo "<br>".$username;

@@ -6,7 +6,10 @@ if(isset($_POST['login'])) {
         $query="SELECT * FROM users,professions WHERE username = '".$_POST['username']."' AND password = '".$_POST['password']."' AND users.professionID = professions.professionID";
         $result=mysqli_query($conn, $query);
         if (!$result){
+            printf("Error: %s\n", mysqli_error($conn));
             echo "<br> Wrong user/pass </br>";
+            exit();
+    
         }
         
         while($row = mysqli_fetch_assoc($result)) {

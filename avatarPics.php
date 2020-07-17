@@ -13,7 +13,7 @@ while($row = mysqli_fetch_array($result)) {
     $avatarName = $row['avatarName'];
     $avatarImage = "<img src='$avatarName' alt='".$avatarName."'";
 
-    $avatar = "<input class='w3-radio' type='radio' name='avatar' value='$avatarID'><label>$avatarImage</label>";
+    $avatar = "<input class='w3-radio' type='radio' name='avatar' value='$avatarID' required><label>  $avatarImage  </label>";
 
     array_push($avatars, $avatar);
 
