@@ -20,7 +20,7 @@ if (isset($_POST['updateProfile'])) {
 }
       $_SESSION['username']=$username;
       $_SESSION['displayname']=$displayname;
-      $_SESSION['professionID']=$professionID;    
+      $_SESSION['professionID']=$professionID;
       header("Location:settingsPage.php?userID=$userID&&username=$username&&professionID=$professionID");
   } 
 }

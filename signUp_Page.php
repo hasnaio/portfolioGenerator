@@ -42,9 +42,15 @@
         </select required>
         <label>Profession</label></p>
 
-        <p>
-            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black" type="button">choose profile image</button>
-        </p>
+        
+        <?php 
+         foreach($avatars as $ava)
+            {?>
+             <?php echo $ava;
+        }?>
+        <br>
+        <label>Choose a Profile Picture</label>
+
         <p>
             <button class="w3-button w3-section w3-teal w3-ripple"> SIGN UP </button></p>            
         </form>
@@ -52,40 +58,8 @@
          <p>Already have an account? Then wtf are you doing here? Go <a href="signIn_Page.php"><button class="w3-button w3-green">Login</button></a>  
         </p>
         </div>
-        <div id="id01" class="w3-modal w3-animate-opacity">
-                <div class="w3-modal-content">
-                    <header class="w3-container w3-teal"> 
-                        <span onclick="document.getElementById('id01').style.display='none'" 
-                        class="w3-button w3-large w3-display-topright">&times;</span>
-                        <h2>Choose a Profile Image</h2>
-                    </header>
-                    <div class="w3-container">
-                    <?php 
-                        foreach($avatars as $ava)
-                            {?>
-                             <p> <?php echo $ava;
-                            }?> </p>
+
                    
-                    </div>
-                </div>
-            </div>   
 
-<script>
-    $(document).ready(function(){
-$("img").imgCheckbox({
-
-    onload: function(){
-        // Do something fantastic!
-    },
-    onclick: function(el){
-    	var isChecked = el.hasClass("imgChked"),
-	    imgEl = el.children()[0];  // the img element
-	    
-	console.log(imgEl.name + " is now " + (isChecked? "checked": "not-checked") + "!");
-    },
-    "radio" : true
-});
-});
-</script>  
     </body>
 </html> 

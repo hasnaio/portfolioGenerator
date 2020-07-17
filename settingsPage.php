@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php 
     include('professions.php'); 
-    include('infoUpdate.php'); 
+    include('infoUpdate.php');
+    include('delete.php');  
 ?>
 <html>
 <head>
@@ -31,13 +32,6 @@
       
       <!-- edit form column -->
       <div class="col-md-9 personal-info">
-          <?php
-            if(@$_GET['alert']==true) {
-              ?>
-              <div class="alert-light"><?php echo $_GET['alert']?></div>
-            <?php 
-            }
-          ?>
         <h3>Personal info</h3>
         
         <form class="form-horizontal" action="infoUpdate.php?userID=<?php echo $_SESSION['userID'];?>&&username=$username&&professionID=$professionID" method="POST" role="form">
@@ -86,7 +80,10 @@
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:335px"> 
 </footer>
 
+<br />
+
  <!-- Modal -->
+<form class="form-horizontal" action="delete.php?userID=<?php echo $_SESSION['userID']; ?>" method="POST" role="form">
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog " role="document">
     <div class="modal-content ">
@@ -102,12 +99,13 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <a href='delete.php?userID=<?php echo $_SESSION['userID'];?>'>
-          <button type="button" class="btn btn-danger">Yes, Delete!</button>
+          <button type="submit" name="deleteProfile" class="btn btn-danger">Yes, Delete!</button>
         </a>
       </div>
     </div>
   </div>
 </div>
+</form>
 
 </body>
 </html>

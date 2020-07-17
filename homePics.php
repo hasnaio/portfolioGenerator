@@ -22,11 +22,7 @@ while($row = mysqli_fetch_array($result)) {
     <img src='uploads/$username$userID/$photoName'>
     <figcaption>
       <h2>$username</h2>
-      <p class='icon-links'>
-        <a href='#'><span class='icon-heart'></span></a>
-        <a href='#'><span class='icon-eye'></span></a>
-        <a href='#'><span class='icon-paper-clip'></span></a>
-      </p>
+
       <p class='description'>$professionName</p>
     </figcaption>			
   </figure>

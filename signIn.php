@@ -14,6 +14,7 @@ if(isset($_POST['login'])) {
             $_SESSION['username']=$row['username'];
             $_SESSION['displayname'] = $row['displayname'];
             $_SESSION['professionID'] = $row['professionID'];
+            $_SESSION['avatarID'] = $row['avatarID'];
             $_SESSION['professionName'] = $row['professionName'];
            header ("Location: homepage.php");
         }

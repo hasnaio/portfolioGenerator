@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include ('homePics.php'); ?>
+<?php include('homePics.php'); ?>
 <html>
 <head>
     <title>homebage</title>
@@ -35,6 +35,7 @@
   <h1><b>BORTFOILIO GENERATOR</b></h1>
 
   <?php
+    
     session_start();
     if(isset($_SESSION['username'])){
 
@@ -42,7 +43,7 @@
       <b>Welcome to Bortfoilio Generator <?php echo $_SESSION['username']; echo $_SESSION['userID'] ?>, check some work from our beloved users >w< !</b><br><br>
       <a href="homepage.php"><button class="w3-button w3-grey w3-margin-right">HomePage</button></a>
       <a href='profile.php?userID=<?php echo $_SESSION['userID'];?>&&username=<?php echo $_SESSION['username'];?>&&professionID=<?php echo $_SESSION['professionID']?>'><button class="w3-button w3-indigo w3-margin-right">Profile</button></a>
-      <a href="settingsPage.php?userID=<?php echo $_SESSION['userID'];?>&&username=<?php echo $_SESSION['username'];?>&&professionID=<?php echo $_SESSION['professionID']?>"><button class="w3-button w3-indigo w3-margin-right">Profile Settings</button></a>
+      <a href="settingsPage.php?userID=<?php echo $_SESSION['userID'];?>&&username=<?php echo $_SESSION['username'];?>&&professionID=<?php echo $_SESSION['professionID']?>&&avatarID=<?php echo $_SESSION['avatarID']?>"><button class="w3-button w3-indigo w3-margin-right">Profile Settings</button></a>
       <a href="upload_page.php"><button class="w3-button w3-yellow w3-indigo w3-margin-right">Upload a pic!</button></a>
       <a href="usersPage.php"><button class="w3-button w3-yellow w3-indigo w3-margin-right">Browse users</button></a>
       <a href="logout.php?logout"><button class="w3-button w3-red w3-margin-right">Logout</button></a>
@@ -54,9 +55,9 @@
       <b>Welcome to Bortfoilio Generator, check some work from our beloved users >w< !</b><br><br>
       <a href="homepage.php"><button class="w3-button w3-grey w3-margin-right">HomePage</button></a>
 
-      <a href="signIn_Page.php"><button class="w3-button w3-green">Login</button></a>  
-      <a href="signUp_Page.php"><button class="w3-button w3-blue">Register</button></a>
-      <a href="usersPage.php"><button class="w3-button w3-yellow">Browse users</button></a>
+      <a href="signIn_Page.php"><button class="w3-button w3-green w3-margin-right">Login</button></a>  
+      <a href="signUp_Page.php"><button class="w3-button w3-blue w3-margin-right">Register</button></a>
+      <a href="usersPage.php"><button class="w3-button w3-yellow w3-margin-right">Browse users</button></a>
  <?php
     }
     ?>
