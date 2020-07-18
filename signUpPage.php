@@ -85,7 +85,7 @@
                 <?php echo $ava;
             }?>
 
-        <br>
+        <br><br>
 
         <button class="w3-button w3-padding-large w3-green w3-margin-bottom w3-margin-right">Sign Up</button>
         </form>

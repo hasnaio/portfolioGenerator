@@ -41,8 +41,6 @@ while($row = mysqli_fetch_array($result)) {
     </a>";
     
     $i++;
-    // echo "<br>".$username;
-    // echo "<br>".$displayname;
 
     array_push($users, $user);
     }

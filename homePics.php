@@ -1,8 +1,5 @@
 
 <?php
-//localhost/porfolioGenerator/profile.php?userID=3&&userName=Elgay
-
-//to get the data, you'll use $_GET["userID"] & $_GET["userName"]
 include ('db.php');
 
 $query="SELECT * FROM users,photos,professions WHERE users.userID=photos.userID AND users.professionID=professions.professionID";
@@ -27,13 +24,6 @@ while($row = mysqli_fetch_array($result)) {
     </figcaption>			
   </figure>
   ";
-
-
-
-
-
-    // echo "<br>".$username;
-    // echo "<br>".$displayname;
 
     array_push($cards, $card);
 } 
