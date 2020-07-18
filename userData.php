@@ -1,5 +1,8 @@
 <?php
 
+//localhost/porfolioGenerator/profile.php?userID=3&&userName=Elgay
+
+//to get the data, you'll use $_GET["userID"] & $_GET["userName"]
 include('db.php');
 
 $userID = (int)$_GET['userID'];
@@ -15,6 +18,9 @@ while($row = mysqli_fetch_array($result)) {
     $displayname = $row['displayname'];
     $professionName=$row['professionName'];
         
+    // echo "<br>".$username;
+    // echo "<br>".$displayname;
+    // echo "<br>".$professionName;
 } 
 
 ?>
